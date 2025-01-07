@@ -5,3 +5,11 @@ const button = document.getElementById('buttonClickMe');
 button.addEventListener('click', () => {
     alert('Button clicked first time!');
 });
+
+// Select the button2 element
+const button2 = document.getElementById('button2');
+
+// Add a click event listener to the button
+button2.addEventListener('click', () => {
+    alert('Button 2 clicked!');
+});
