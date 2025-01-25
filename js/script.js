@@ -1,15 +1,13 @@
-// Select the button element
-const button = document.getElementById('buttonClickMe');
-
-// Add a click event listener to the button
-button.addEventListener('click', () => {
-    alert('Button clicked first time!');
-});
-
-// Select the button2 element
-const button2 = document.getElementById('button2');
-
-// Add a click event listener to the button
-button2.addEventListener('click', () => {
-    alert('Button 2 clicked!');
+document.getElementById('jobForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    let valid = true;
+    ['firstName', 'lastName'].forEach(id => {
+        const input = document.getElementById(id);
+        const error = input.nextElementSibling;
+        if (input.value.trim() === '') {
+            error.style.display = 'block';
+            valid = false;
+        } else error.style.display = 'none';
+    });
+    if (valid) alert('Form submitted!');
 });
